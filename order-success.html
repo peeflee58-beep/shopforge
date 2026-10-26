@@ -8,6 +8,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/checkout.css">
+    <style>
+        @media (max-width: 768px) {
+            .success-grid {
+                grid-template-columns: 1fr !important;
+            }
+            .checkout-container {
+                padding: 20px 4% !important;
+            }
+            .checkout-header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            .checkout-nav-links {
+                display: flex;
+                gap: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -24,7 +43,6 @@
 
 <main class="checkout-container" style="max-width: 800px;">
 
-    <!-- Success Header Card -->
     <div class="checkout-card" style="text-align: center; padding: 40px 30px; display: grid; gap: 15px; justify-items: center;">
         <div style="width: 70px; height: 70px; background: rgba(74, 222, 128, 0.15); color: #4ade80; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; border: 1px solid rgba(74, 222, 128, 0.3);">
             <i class="bi bi-check-lg"></i>
@@ -34,7 +52,6 @@
             <p style="font-size: 13px; color: var(--muted);">Thank you for your purchase. Your order has been confirmed.</p>
         </div>
 
-        <!-- Order ID & Date Banner -->
         <div style="width: 100%; background: linear-gradient(135deg, #2563eb, #1d4ed8); padding: 20px; border-radius: 12px; text-align: left; display: grid; gap: 5px; margin-top: 10px;">
             <span style="font-size: 11px; color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 0.5px;">Order Number</span>
             <strong id="successOrderId" style="font-size: 16px; color: white; font-family: monospace;">ORD-20261026-XXXX</strong>
@@ -44,22 +61,18 @@
         </div>
     </div>
 
-    <!-- What's Next Notice -->
     <div class="checkout-card" style="background: rgba(37, 99, 235, 0.1); border: 1px solid rgba(96, 165, 250, 0.3);">
         <h3 style="color: #60a5fa; margin-bottom: 12px;"><i class="bi bi-info-circle"></i> What's Next?</h3>
         <ul style="list-style: none; display: grid; gap: 8px; font-size: 13px; color: var(--muted);">
-            <li><i class="bi bi-check text-success" style="color: #4ade80; font-weight: bold;"></i> You will receive an email confirmation shortly</li>
-            <li><i class="bi bi-check text-success" style="color: #4ade80; font-weight: bold;"></i> Your order will be processed within 24 hours</li>
-            <li><i class="bi bi-check text-success" style="color: #4ade80; font-weight: bold;"></i> Track your order status in your "My Dashboard" section</li>
+            <li><i class="bi bi-check" style="color: #4ade80; font-weight: bold;"></i> You will receive an email confirmation shortly</li>
+            <li><i class="bi bi-check" style="color: #4ade80; font-weight: bold;"></i> Your order will be processed within 24 hours</li>
+            <li><i class="bi bi-check" style="color: #4ade80; font-weight: bold;"></i> Track your order status in your "My Dashboard" section</li>
         </ul>
     </div>
 
-    <!-- Order Items & Summary -->
     <div class="checkout-card">
         <h3><i class="bi bi-receipt" style="color: #facc15;"></i> Order Items</h3>
-        <div id="successItemsList" style="display: grid; gap: 12px; margin-bottom: 20px;">
-            <!-- Populated dynamically -->
-        </div>
+        <div id="successItemsList" style="display: grid; gap: 12px; margin-bottom: 20px;"></div>
 
         <div class="summary-totals">
             <div class="summary-line">
@@ -81,13 +94,10 @@
         </div>
     </div>
 
-    <!-- Customer & Payment Info -->
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+    <div class="success-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
         <div class="checkout-card">
             <h3 style="font-size: 14px;"><i class="bi bi-person" style="color: #60a5fa;"></i> Customer Information</h3>
-            <div id="successCustomerInfo" style="font-size: 12px; color: var(--muted); display: grid; gap: 5px; margin-top: 10px;">
-                <!-- Populated dynamically -->
-            </div>
+            <div id="successCustomerInfo" style="font-size: 12px; color: var(--muted); display: grid; gap: 5px; margin-top: 10px;"></div>
         </div>
         <div class="checkout-card">
             <h3 style="font-size: 14px;"><i class="bi bi-credit-card" style="color: #4ade80;"></i> Payment Information</h3>
@@ -105,7 +115,6 @@
         </div>
     </div>
 
-    <!-- Action Buttons -->
     <div style="display: grid; gap: 12px; margin-top: 10px;">
         <a href="buyer-dashboard.html" class="btn-submit" style="text-align: center; text-decoration: none; display: block;">
             <i class="bi bi-bag-check"></i> View My Orders
@@ -113,9 +122,6 @@
         <a href="products.html" style="text-align: center; padding: 14px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: white; border-radius: 10px; text-decoration: none; font-weight: 500; font-size: 14px;">
             <i class="bi bi-arrow-left"></i> Continue Shopping
         </a>
-        <button onclick="window.print()" style="padding: 12px; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border); color: var(--muted); border-radius: 10px; cursor: pointer; font-size: 13px;">
-            <i class="bi bi-printer"></i> Print Order
-        </button>
     </div>
 
 </main>
