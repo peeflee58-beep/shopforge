@@ -68,18 +68,17 @@ function initApp() {
 
         if (loginBtn && user) {
             loginBtn.textContent = user.email ? user.email.split('@')[0] : "Account";
-            const isInFrontend = window.location.pathname.includes('/frontend/');
 
             // Check Firestore role
             try {
                 const userDoc = await getDoc(doc(db, "users", user.uid));
                 if (userDoc.exists() && userDoc.data().role === "seller") {
-                    loginBtn.href = isInFrontend ? "admin.html" : "frontend/admin.html";
+                    loginBtn.href = "admin.html";
                 } else {
-                    loginBtn.href = isInFrontend ? "buyer-dashboard.html" : "frontend/buyer-dashboard.html";
+                    loginBtn.href = "buyer-dashboard.html";
                 }
             } catch (err) {
-                loginBtn.href = isInFrontend ? "buyer-dashboard.html" : "frontend/buyer-dashboard.html";
+                loginBtn.href = "buyer-dashboard.html";
             }
 
             // Compact, elegant Logout button
@@ -114,7 +113,7 @@ function initApp() {
                     try {
                         await signOut(auth);
                         localStorage.removeItem("shopforge_cart");
-                        window.location.href = isInFrontend ? "login.html" : "frontend/login.html";
+                        window.location.href = "login.html";
                     } catch (error) {
                         console.error("Logout error:", error);
                     }
@@ -133,8 +132,7 @@ function initApp() {
                 showToast("Your cart is empty!");
                 return;
             }
-            const isInFrontend = window.location.pathname.includes('/frontend/');
-            window.location.href = isInFrontend ? "checkout.html" : "frontend/checkout.html";
+            window.location.href = "checkout.html";
         });
     }
 
