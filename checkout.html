@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | SHOPFORGE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+
+<header class="checkout-header">
+    <a href="index.html" class="checkout-logo">
+        <i class="bi bi-bag-check-fill" style="color: #60a5fa;"></i>
+        SHOPFORGE <span style="font-size: 11px; color: var(--muted); font-weight: 400;">| Secure Checkout</span>
+    </a>
+    <nav class="checkout-nav-links">
+        <a href="products.html">Browse Catalogue</a>
+        <a href="buyer-dashboard.html">My Dashboard</a>
+    </nav>
+</header>
+
+<main class="checkout-container">
+
+    <!-- Heading -->
+    <div>
+        <span style="font-size: 11px; color: var(--muted); letter-spacing: 0.5px; text-transform: uppercase; display: flex; align-items: center; gap: 6px; margin-bottom: 5px;">
+            <span style="width: 6px; height: 6px; background: #4ade80; border-radius: 50%;"></span> SECURE PAYMENT & SHIPPING
+        </span>
+        <h2 style="font-size: 26px; font-weight: 700;">Complete Your Order</h2>
+        <p style="font-size: 13px; color: var(--muted); margin-top: 2px;">Review your items, fill in your delivery details, and discover intelligent recommendations.</p>
+    </div>
+
+    <!-- Main Grid -->
+    <div class="checkout-grid">
+        
+        <!-- Left: Form -->
+        <div class="checkout-card">
+            <h3><i class="bi bi-truck" style="color: #60a5fa;"></i> Shipping & Billing Details</h3>
+            
+            <form id="checkoutForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="shipName" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="shipEmail" required placeholder="john@example.com">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Street Address</label>
+                    <input type="text" id="shipAddress" required placeholder="123 Market Street, Suite 4B">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>City / State</label>
+                        <input type="text" id="shipCity" required placeholder="New York, NY">
+                    </div>
+                    <div class="form-group">
+                        <label>Postal Code</label>
+                        <input type="text" id="shipZip" required placeholder="10001">
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 20px;"><i class="bi bi-credit-card" style="color: #4ade80;"></i> Payment Method</h3>
+                <div class="payment-box">
+                    <input type="radio" checked id="payCard" name="payment">
+                    <label for="payCard" style="margin: 0; color: white; cursor: pointer;">Credit / Debit Card (Simulated Secure Checkout)</label>
+                </div>
+
+                <button type="submit" id="placeOrderBtn" class="btn-submit">Place Order & Pay Now</button>
+            </form>
+        </div>
+
+        <!-- Right: Summary -->
+        <div class="checkout-card">
+            <h3 style="border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 15px;">Order Summary</h3>
+            
+            <div id="checkoutItemsList" class="summary-items">
+                <!-- Dynamically populated -->
+            </div>
+
+            <div class="summary-totals">
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <strong id="checkoutSubtotal" style="color: white;">$0.00</strong>
+                </div>
+                <div class="summary-line">
+                    <span>Shipping</span>
+                    <span style="color: #4ade80;">Free</span>
+                </div>
+                <div class="summary-line total">
+                    <span>Total Amount</span>
+                    <strong id="checkoutTotal" style="color: #60a5fa;">$0.00</strong>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Recommendations -->
+    <div>
+        <div style="margin-bottom: 20px;">
+            <span style="font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px;">INTELLIGENT RECOMMENDATIONS</span>
+            <h3 style="font-size: 18px; margin-top: 2px;">Frequently bought together <span style="color: #60a5fa;">similar products.</span></h3>
+        </div>
+
+        <div id="recommendedProductsGrid" class="recommendations-grid">
+            <!-- Dynamically populated -->
+        </div>
+    </div>
+
+</main>
+
+<script type="module" src="java/checkout.js"></script>
+</body>
+</html>

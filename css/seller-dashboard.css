@@ -1,0 +1,151 @@
+:root {
+--bg-main: #030712;
+--card-bg: linear-gradient(150deg, #0d172b, #080f20);
+--border: rgba(255, 255, 255, 0.08);
+--border-hover: rgba(59, 130, 246, 0.3);
+--accent: #2563eb;
+--accent-hover: #1d4ed8;
+--text-main: #f8fafc;
+--muted: #94a3b8;
+--success: #4ade80;
+--info: #60a5fa;
+--purple: #c084fc;
+--warning: #facc15;
+--danger: #f87171;
+--danger-bg: rgba(239, 68, 68, 0.15);
+}
+
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+}
+
+body {
+background-color: var(--bg-main);
+color: var(--text-main);
+min-height: 100vh;
+line-height: 1.5;
+}
+
+/* Header Navigation */
+.products-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 18px 7%;
+background: rgba(13, 23, 43, 0.8);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid var(--border);
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+.logo {
+display: flex;
+align-items: center;
+gap: 8px;
+font-size: 18px;
+font-weight: 700;
+color: #fff;
+text-decoration: none;
+letter-spacing: 0.5px;
+}
+
+.logo-icon {
+color: var(--info);
+font-size: 20px;
+}
+
+.header-links a {
+color: var(--muted);
+text-decoration: none;
+font-size: 13px;
+font-weight: 500;
+transition: color 0.2s ease;
+}
+
+.header-links a:hover {
+color: #fff;
+}
+
+/* Headings & Section Typography */
+.section-heading {
+margin-bottom: 10px;
+}
+
+.eyebrow {
+font-size: 11px;
+font-weight: 600;
+letter-spacing: 1.5px;
+color: var(--info);
+display: flex;
+align-items: center;
+gap: 6px;
+margin-bottom: 6px;
+}
+
+.status-dot {
+width: 7px;
+height: 7px;
+background-color: var(--success);
+border-radius: 50%;
+box-shadow: 0 0 8px var(--success);
+display: inline-block;
+}
+
+.section-heading h2 {
+font-size: 24px;
+font-weight: 700;
+color: #fff;
+}
+
+.section-heading p {
+font-size: 13px;
+color: var(--muted);
+}
+
+/* Forms & Input Controls */
+input, select, textarea {
+outline: none;
+transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+border-color: var(--accent) !important;
+box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+button {
+transition: all 0.2s ease;
+}
+
+button:hover {
+filter: brightness(1.1);
+transform: translateY(-1px);
+}
+
+button:active {
+transform: translateY(0);
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+width: 6px;
+}
+
+::-webkit-scrollbar-track {
+background: rgba(15, 23, 42, 0.5);
+border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+background: rgba(255, 255, 255, 0.15);
+border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: rgba(255, 255, 255, 0.25);
+}

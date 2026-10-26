@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | SHOPFORGE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/product.css">
+</head>
+
+<body>
+
+<header class="products-header">
+    <a href="index.html" class="logo">
+        <span class="logo-icon"><i class="bi bi-bag-check-fill"></i></span>
+        SHOPFORGE
+    </a>
+
+    <nav class="header-links">
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Products</a>
+        <button class="cart-trigger cart-button" type="button">
+            <i class="bi bi-cart3"></i>
+            Cart <span id="cartCount">0</span>
+        </button>
+    </nav>
+</header>
+
+<main>
+    <section class="catalogue-hero">
+        <div class="hero-content">
+            <span class="eyebrow">THE SHOPFORGE COLLECTION</span>
+            <h1>Find what you<br><span>really need.</span></h1>
+            <p>Explore products across technology, fashion and gaming, all in one place.</p>
+
+            <div class="search-box">
+                <i class="bi bi-search"></i>
+                <input type="search" id="productSearch"
+                       placeholder="Search products..." aria-label="Search products">
+                <button id="searchButton" type="button">Search</button>
+            </div>
+        </div>
+
+        <div class="hero-decoration">
+            <div class="decoration-orb orb-one"></div>
+            <div class="decoration-orb orb-two"></div>
+            <div class="hero-icon"><i class="bi bi-bag-heart"></i></div>
+            <span class="floating-tag tag-one">Discover</span>
+            <span class="floating-tag tag-two">Shop smarter</span>
+        </div>
+    </section>
+
+    <section class="catalogue-section">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">YOUR NEXT FIND</span>
+                <h2>Explore products</h2>
+                <p>Browse the collection and find your next favourite.</p>
+            </div>
+            <span class="result-count" id="resultCount">0 products</span>
+        </div>
+
+        <div class="catalogue-controls">
+            <div class="category-filters" id="categoryFilters">
+                <button class="filter-btn active" data-category="all">All products</button>
+                <button class="filter-btn" data-category="Tech">Technology</button>
+                <button class="filter-btn" data-category="Fashion">Fashion</button>
+                <button class="filter-btn" data-category="Gaming">Gaming</button>
+            </div>
+
+            <select id="sortProducts" aria-label="Sort products">
+                <option value="featured">Featured</option>
+                <option value="low-high">Price: Low to high</option>
+                <option value="high-low">Price: High to low</option>
+                <option value="az">Name: A to Z</option>
+            </select>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+
+        <div class="no-results" id="noResults" hidden>
+            <i class="bi bi-search"></i>
+            <h3>No products found</h3>
+            <p>Try another search or choose a different category.</p>
+            <button type="button" id="resetFilters">View all products</button>
+        </div>
+    </section>
+</main>
+
+<!-- Shopping cart drawer: uses the existing app.js cart system -->
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-header">
+        <div>
+            <span class="eyebrow">YOUR SELECTION</span>
+            <h2>Your cart</h2>
+        </div>
+        <button type="button" id="closeCart" aria-label="Close cart">
+            <i class="bi bi-x-lg"></i>
+        </button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-empty visible" id="cartEmpty">
+        <i class="bi bi-cart3"></i>
+        <h3>Your cart is empty</h3>
+        <p>Add something you love to get started.</p>
+    </div>
+
+    <div class="cart-summary hidden" id="cartSummary">
+        <div class="subtotal-row">
+            <span>Subtotal</span>
+            <strong id="cartSubtotal">$0.00</strong>
+        </div>
+        <p>Shipping and any applicable taxes are calculated at checkout.</p>
+        <button type="button" id="checkoutButton" class="checkout-btn">
+            Continue to checkout <i class="bi bi-arrow-right"></i>
+        </button>
+    </div>
+</aside>
+
+<div class="toast" id="toast">
+    <i class="bi bi-check-circle-fill"></i>
+    <span id="toastMessage"></span>
+</div>
+
+<footer class="products-footer">
+    <a href="index.html" class="logo">SHOPFORGE</a>
+    <p>Discover more. Choose better.</p>
+    <span>© 2026 SHOPFORGE. All rights reserved.</span>
+</footer>
+
+<script type="module" src="../java/products.js"></script>
+<script type="module" src="java/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SHOPFORGE | Intelligent E-Commerce Platform</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- PAGE LOADER -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-mark">S</div>
+            <span>SHOPFORGE</span>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="site-header" id="siteHeader">
+        <nav class="navbar container">
+
+            <a href="#home" class="logo">
+                <span class="logo-mark">S</span>
+                <span>SHOP<span>FORGE</span></span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="active">Home</a>
+                <a href="#products">Products</a>
+                <a href="#intelligence">Intelligence</a>
+                <a href="#analytics">Analytics</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="icon-button cart-trigger" aria-label="Open shopping cart">
+                    <i class="bi bi-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+
+                <a href="login.html" class="login-btn" id="loginButton">
+                    Login
+                </a>
+
+                <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero section" id="home">
+            <div class="container hero-grid">
+
+                <div class="hero-copy reveal">
+                    <div class="eyebrow">
+                        <span class="status-dot"></span>
+                        INTELLIGENT COMMERCE PLATFORM
+                    </div>
+
+                    <h1>
+                        Turn every
+                        <span class="accent">transaction</span>
+                        into an advantage.
+                    </h1>
+
+                    <p class="hero-description">
+                        SHOPFORGE combines modern e-commerce with sales intelligence,
+                        customer insights and product analytics to help vendors
+                        make smarter business decisions.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="frontend/products.html" class="btn btn-primary">
+                            Explore products
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                        <a href="#analytics" class="btn btn-outline">
+                            View platform
+                        </a>
+                    </div>
+
+                    <div class="hero-metrics">
+                        <div class="metric">
+                            <strong>12K<span>+</span></strong>
+                            <small>Products sold</small>
+                        </div>
+
+                        <div class="metric-divider"></div>
+
+                        <div class="metric">
+                            <strong>3.5K<span>+</span></strong>
+                            <small>Active vendors</small>
+                        </div>
+
+                        <div class="metric-divider"></div>
+
+                        <div class="metric">
+                            <strong>98<span>%</span></strong>
+                            <small>Forecast accuracy</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal reveal-delay">
+                    <div class="dashboard-window">
+
+                        <div class="window-header">
+                            <div class="window-title">
+                                <span class="live-indicator"></span>
+                                Vendor overview
+                            </div>
+                            <span class="window-period">This month <i class="bi bi-chevron-down"></i></span>
+                        </div>
+
+                        <div class="revenue-row">
+                            <div>
+                                <span class="muted-label">Total revenue</span>
+                                <h2>$18,240.80</h2>
+                            </div>
+
+                            <div class="growth">
+                                <i class="bi bi-arrow-up"></i>
+                                24.8%
+                            </div>
+                        </div>
+
+                        <div class="chart-area">
+                            <div class="chart-grid-line line-1"></div>
+                            <div class="chart-grid-line line-2"></div>
+                            <div class="chart-grid-line line-3"></div>
+
+                            <svg class="sales-chart" viewBox="0 0 600 220" preserveAspectRatio="none" aria-label="Sales chart">
+                                <defs>
+                                    <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#22c55e" stop-opacity=".25"/>
+                                        <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+                                    </linearGradient>
+                                </defs>
+
+                                <path
+                                    d="M0,180 C45,170 55,145 95,155 C135,165 145,115 190,130 C230,145 250,92 295,110 C335,128 345,80 390,91 C430,102 450,52 490,72 C530,92 550,38 600,45 L600,220 L0,220 Z"
+                                    fill="url(#chartFill)"
+                                />
+
+                                <path
+                                    d="M0,180 C45,170 55,145 95,155 C135,165 145,115 190,130 C230,145 250,92 295,110 C335,128 345,80 390,91 C430,102 450,52 490,72 C530,92 550,38 600,45"
+                                    fill="none"
+                                    stroke="#22c55e"
+                                    stroke-width="4"
+                                    stroke-linecap="round"
+                                />
+                            </svg>
+
+                            <div class="chart-labels">
+                                <span>Jan</span>
+                                <span>Feb</span>
+                                <span>Mar</span>
+                                <span>Apr</span>
+                                <span>May</span>
+                                <span>Jun</span>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-stats">
+                            <div class="mini-stat">
+                                <span class="mini-icon"><i class="bi bi-bag-check"></i></span>
+                                <div>
+                                    <strong>2,450</strong>
+                                    <small>Orders</small>
+                                </div>
+                            </div>
+
+                            <div class="mini-stat">
+                                <span class="mini-icon"><i class="bi bi-people"></i></span>
+                                <div>
+                                    <strong>8,920</strong>
+                                    <small>Customers</small>
+                                </div>
+                            </div>
+
+                            <div class="mini-stat">
+                                <span class="mini-icon"><i class="bi bi-box-seam"></i></span>
+                                <div>
+                                    <strong>1,284</strong>
+                                    <small>Products</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="floating-insight insight-bottom">
+                        <span class="insight-icon green"><i class="bi bi-graph-up-arrow"></i></span>
+                        <div>
+                            <strong>+38.4%</strong>
+                            <p>Revenue growth</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TRUST STRIP -->
+        <section class="trust-strip">
+            <div class="container trust-inner">
+                <span>BUILT FOR MODERN VENDORS</span>
+                <div class="trust-names">
+                    <b>TechStore</b>
+                    <b>NovaMart</b>
+                    <b>QuickBuy</b>
+                    <b>UrbanCart</b>
+                    <b>SmartHub</b>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS -->
+        <section class="section products-section" id="products">
+            <div class="container">
+
+                <div class="section-heading reveal">
+                    <div>
+                        <span class="section-kicker">FEATURED COLLECTION</span>
+                        <h2>Explore what is <span class="accent">trending.</span></h2>
+                    </div>
+
+                    <a href="products.html" class="text-link" style="font-weight: 700; font-size: 15px;">
+                        View all products
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <div class="product-grid">
+
+                    <article class="product-card reveal">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1170&auto=format&fit=crop" alt="Premium sneakers">
+                            <span class="product-tag">Trending</span>
+                            <a href="products.html" class="quick-view" aria-label="Explore Premium Sneakers">
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="product-info">
+                            <div>
+                                <span class="product-category">Fashion</span>
+                                <h3>Premium Sneakers</h3>
+                                <p>Luxury smart footwear</p>
+                            </div>
+
+                            <div class="product-footer">
+                                <strong>$120</strong>
+                                <a href="products.html" class="explore-btn">Explore <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal reveal-delay">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1170&auto=format&fit=crop" alt="Wireless headphones">
+                            <span class="product-tag">Popular</span>
+                            <a href="products.html" class="quick-view" aria-label="Explore Wireless Headphones">
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="product-info">
+                            <div>
+                                <span class="product-category">Technology</span>
+                                <h3>Wireless Headphones</h3>
+                                <p>Immersive smart audio</p>
+                            </div>
+
+                            <div class="product-footer">
+                                <strong>$85</strong>
+                                <a href="products.html" class="explore-btn">Explore <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1169&auto=format&fit=crop" alt="Smart watch">
+                            <span class="product-tag">New</span>
+                            <a href="products.html" class="quick-view" aria-label="Explore Smart Watch">
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="product-info">
+                            <div>
+                                <span class="product-category">Technology</span>
+                                <h3>Smart Watch</h3>
+                                <p>Advanced activity tracking</p>
+                            </div>
+
+                            <div class="product-footer">
+                                <strong>$140</strong>
+                                <a href="products.html" class="explore-btn">Explore <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- INTELLIGENCE -->
+        <section class="section intelligence-section" id="intelligence">
+            <div class="container intelligence-grid">
+
+                <div class="intelligence-copy reveal">
+                    <span class="section-kicker">MARKET BASKET INTELLIGENCE</span>
+                    <h2>Know what customers are likely to buy <span class="accent">next.</span></h2>
+                    <p>
+                        SHOPFORGE analyzes purchasing patterns to identify products
+                        that are frequently bought together. Vendors can use these
+                        insights to improve product placement, recommendations and sales.
+                    </p>
+
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <span><i class="bi bi-check2"></i></span>
+                            <div>
+                                <strong>Purchase pattern analysis</strong>
+                                <p>Identify frequently purchased product combinations.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <span><i class="bi bi-check2"></i></span>
+                            <div>
+                                <strong>Personalized recommendations</strong>
+                                <p>Help customers discover relevant products.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <span><i class="bi bi-check2"></i></span>
+                            <div>
+                                <strong>Data-driven decisions</strong>
+                                <p>Turn transaction data into actionable business insight.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommendation-panel reveal reveal-delay">
+                    <div class="panel-top">
+                        <div>
+                            <span class="panel-kicker">SMART RECOMMENDATION</span>
+                            <h3>Frequently bought together</h3>
+                        </div>
+                    </div>
+
+                    <div class="recommendation-flow">
+                        <div class="recommendation-product">
+                            <div class="recommendation-image">
+                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=400&auto=format&fit=crop" alt="">
+                            </div>
+                            <span>Sneakers</span>
+                            <strong>$120</strong>
+                        </div>
+
+                        <div class="plus">+</div>
+
+                        <div class="recommendation-product">
+                            <div class="recommendation-image">
+                                <img src="https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?q=80&w=400&auto=format&fit=crop" alt="">
+                            </div>
+                            <span>Sports Socks</span>
+                            <strong>$18</strong>
+                        </div>
+
+                        <div class="plus">+</div>
+
+                        <div class="recommendation-product">
+                            <div class="recommendation-image">
+                                <img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?q=80&w=400&auto=format&fit=crop" alt="">
+                            </div>
+                            <span>Classic Cap</span>
+                            <strong>$24</strong>
+                        </div>
+                    </div>
+
+                    <div class="recommendation-result">
+                        <div>
+                            <span>Recommendation confidence</span>
+                            <strong>92%</strong>
+                        </div>
+                        <div class="confidence-bar">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ANALYTICS -->
+        <section class="section analytics-section" id="analytics">
+            <div class="container">
+
+                <div class="section-heading centered reveal">
+                    <div>
+                        <span class="section-kicker">VENDOR INTELLIGENCE</span>
+                        <h2>Business decisions backed by <span class="accent">data.</span></h2>
+                    </div>
+                </div>
+
+                <div class="analytics-grid">
+
+                    <div class="analytics-card analytics-large reveal">
+                        <div class="card-heading">
+                            <div>
+                                <span class="muted-label">Sales forecast</span>
+                                <h3>Expected demand</h3>
+                            </div>
+                            <span class="forecast-badge">+18.6%</span>
+                        </div>
+
+                        <div class="forecast-bars">
+                            <div class="forecast-column"><span style="height:38%"></span><small>Mon</small></div>
+                            <div class="forecast-column"><span style="height:55%"></span><small>Tue</small></div>
+                            <div class="forecast-column"><span style="height:48%"></span><small>Wed</small></div>
+                            <div class="forecast-column"><span style="height:72%"></span><small>Thu</small></div>
+                            <div class="forecast-column"><span style="height:66%"></span><small>Fri</small></div>
+                            <div class="forecast-column"><span style="height:84%"></span><small>Sat</small></div>
+                            <div class="forecast-column active"><span style="height:94%"></span><small>Sun</small></div>
+                        </div>
+                    </div>
+
+                    <div class="analytics-card reveal reveal-delay">
+                        <span class="analytics-icon"><i class="bi bi-graph-up-arrow"></i></span>
+                        <span class="muted-label">Revenue growth</span>
+                        <strong class="big-number">+38%</strong>
+                        <p>Compared with the previous period.</p>
+                    </div>
+
+                    <div class="analytics-card reveal">
+                        <span class="analytics-icon"><i class="bi bi-people"></i></span>
+                        <span class="muted-label">Customer retention</span>
+                        <strong class="big-number">89%</strong>
+                        <p>Returning customers across the platform.</p>
+                    </div>
+
+                    <div class="analytics-card reveal reveal-delay">
+                        <span class="analytics-icon"><i class="bi bi-box-seam"></i></span>
+                        <span class="muted-label">Inventory health</span>
+                        <strong class="big-number">94%</strong>
+                        <p>Products currently within healthy stock levels.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card reveal">
+                    <div>
+                        <span class="section-kicker">READY TO BUILD?</span>
+                        <h2>Bring your store into the <span class="accent">intelligent commerce</span> era.</h2>
+                        <p>Manage products, understand customers and make better business decisions from one platform.</p>
+                    </div>
+
+                    <a href="products.html" class="btn btn-light">
+                        Explore SHOPFORGE
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CART OVERLAY -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- CART DRAWER -->
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+
+        <div class="cart-header">
+            <div>
+                <span class="section-kicker">SHOPPING CART</span>
+                <h2>Your cart</h2>
+            </div>
+
+            <button class="close-cart" id="closeCart" aria-label="Close cart">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items are generated by app.js -->
+        </div>
+
+        <div class="cart-empty" id="cartEmpty">
+            <div class="empty-icon"><i class="bi bi-bag"></i></div>
+            <h3>Your cart is empty</h3>
+            <p>Add products from the SHOPFORGE product catalogue.</p>
+            <a href="products.html" class="btn btn-primary">Browse products</a>
+        </div>
+
+        <div class="cart-summary" id="cartSummary">
+            <div class="summary-line">
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">$0.00</strong>
+            </div>
+            <div class="summary-line muted">
+                <span>Shipping</span>
+                <span>Calculated at checkout</span>
+            </div>
+
+            <button class="checkout-btn" id="checkoutButton">
+                Proceed to checkout
+                <i class="bi bi-arrow-right"></i>
+            </button>
+        </div>
+    </aside>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+        <i class="bi bi-check-circle-fill"></i>
+        <span id="toastMessage">Done</span>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-main">
+
+            <div class="footer-brand">
+                <a href="#home" class="logo">
+                    <span class="logo-mark">S</span>
+                    <span>SHOP<span>FORGE</span></span>
+                </a>
+                <p>
+                    Intelligent e-commerce for modern customers and vendors.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="#products">Products</a>
+                <a href="#intelligence">Intelligence</a>
+                <a href="#analytics">Analytics</a>
+                <a href="products.html">Catalogue</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Account</h4>
+                <a href="login.html">Login</a>
+                <a href="signup.html">Register</a>
+                <a href="buyer-dashboard.html">User dashboard</a>
+                <a href="seller-dashboard.html">Vendor dashboard</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Company</h4>
+                <a href="#">About</a>
+                <a href="#">Support</a>
+                <a href="#">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+            <span>© 2026 SHOPFORGE. All rights reserved.</span>
+            <span>Built for intelligent commerce.</span>
+        </div>
+    </footer>
+<script type="module" src="java/app.js"></script>
+</body>
+</html>

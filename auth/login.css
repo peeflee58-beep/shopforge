@@ -1,0 +1,526 @@
+/* ========================================
+   SHOPFORGE AUTHENTICATION STYLES
+   Black • White • Green
+======================================== */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #080a09;
+    --surface: #101311;
+    --surface-light: #171a18;
+    --green: #22c55e;
+    --green-hover: #16a34a;
+    --white: #ffffff;
+    --text: #e8eae8;
+    --muted: #8b928d;
+    --border: rgba(255, 255, 255, 0.09);
+    --font: "Inter", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+/* ========================================
+   BACKGROUND
+======================================== */
+
+.background-grid {
+    position: fixed;
+    inset: 0;
+    z-index: -3;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    background-size: 55px 55px;
+    mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
+
+.background-glow {
+    position: fixed;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    filter: blur(130px);
+    opacity: .12;
+    pointer-events: none;
+    z-index: -2;
+}
+
+.glow-one {
+    background: var(--green);
+    top: -220px;
+    left: -180px;
+}
+
+.glow-two {
+    background: #ffffff;
+    right: -280px;
+    bottom: -240px;
+}
+
+/* ========================================
+   PAGE LAYOUT
+======================================== */
+
+.auth-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 20px 25px;
+}
+
+/* ========================================
+   BRAND
+======================================== */
+
+.auth-brand {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-brand > a {
+    color: var(--white);
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -1.4px;
+    text-decoration: none;
+}
+
+.auth-brand > a span {
+    color: var(--green);
+}
+
+.auth-brand p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 8px;
+    letter-spacing: .5px;
+}
+
+/* ========================================
+   LOGIN CARD
+======================================== */
+
+.auth-card {
+    width: 100%;
+    max-width: 455px;
+    padding: 38px;
+    background: rgba(16, 19, 17, .94);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow:
+        0 30px 90px rgba(0, 0, 0, .45),
+        inset 0 1px 0 rgba(255, 255, 255, .025);
+    animation: cardEnter .65s ease both;
+}
+
+@keyframes cardEnter {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 17px;
+    color: var(--green);
+    font-size: 25px;
+    background: rgba(34, 197, 94, .09);
+    border: 1px solid rgba(34, 197, 94, .2);
+}
+
+.auth-header h1 {
+    font-size: 29px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+
+.auth-header p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* ========================================
+   FORM
+======================================== */
+
+.auth-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 21px;
+}
+
+.form-group > label,
+.password-label > label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.password-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.password-label > a {
+    color: var(--green);
+    text-decoration: none;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.password-label > a:hover {
+    color: #86efac;
+}
+
+/* ========================================
+   INPUTS
+======================================== */
+
+.input-wrapper {
+    width: 100%;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 15px;
+    background: #0b0d0c;
+    border: 1px solid #292e2a;
+    border-radius: 11px;
+    transition: border-color .25s, box-shadow .25s;
+}
+
+.input-wrapper:focus-within {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, .09);
+}
+
+.input-wrapper > i {
+    color: #737b75;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.input-wrapper:focus-within > i {
+    color: var(--green);
+}
+
+.input-wrapper input {
+    width: 100%;
+    min-width: 0;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--white);
+    font-family: var(--font);
+    font-size: 13px;
+}
+
+.input-wrapper input::placeholder {
+    color: #59605b;
+}
+
+.input-wrapper input:-webkit-autofill,
+.input-wrapper input:-webkit-autofill:hover,
+.input-wrapper input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--white);
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+/* ========================================
+   PASSWORD TOGGLE
+======================================== */
+
+.password-toggle {
+    width: 35px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: transparent;
+    color: #777f79;
+    font-size: 17px;
+    cursor: pointer;
+    transition: color .2s;
+}
+
+.password-toggle:hover {
+    color: var(--green);
+}
+
+/* ========================================
+   REMEMBER ME
+======================================== */
+
+.remember-row {
+    margin: 3px 0 24px;
+}
+
+.checkbox-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--muted);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    width: 15px;
+    height: 15px;
+    accent-color: var(--green);
+    cursor: pointer;
+}
+
+/* ========================================
+   SUBMIT BUTTON
+======================================== */
+
+.auth-submit {
+    width: 100%;
+    min-height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid var(--green);
+    border-radius: 11px;
+    background: var(--green);
+    color: #061109;
+    font-family: var(--font);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .25s, transform .25s, box-shadow .25s;
+}
+
+.auth-submit:hover {
+    background: #4ade80;
+    box-shadow: 0 10px 30px rgba(34, 197, 94, .16);
+    transform: translateY(-2px);
+}
+
+.auth-submit:active {
+    transform: translateY(0);
+}
+
+.auth-submit i {
+    transition: transform .25s;
+}
+
+.auth-submit:hover i {
+    transform: translateX(4px);
+}
+
+.auth-submit:disabled {
+    opacity: .65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ========================================
+   FORM FEEDBACK
+======================================== */
+
+.form-message {
+    display: none;
+    margin-top: 15px;
+    padding: 12px 14px;
+    border-radius: 9px;
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.form-message:not(:empty) {
+    display: block;
+    color: #fca5a5;
+    background: rgba(239, 68, 68, .08);
+    border: 1px solid rgba(239, 68, 68, .2);
+}
+
+.form-message.success {
+    color: #86efac;
+    background: rgba(34, 197, 94, .08);
+    border-color: rgba(34, 197, 94, .22);
+}
+
+/* ========================================
+   DIVIDER
+======================================== */
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 27px 0;
+    color: #626962;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: var(--border);
+}
+
+.auth-divider span {
+    letter-spacing: 1.5px;
+}
+
+/* ========================================
+   CREATE ACCOUNT
+======================================== */
+
+.auth-footer {
+    text-align: center;
+}
+
+.auth-footer p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 11px;
+}
+
+.auth-footer > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color .2s;
+}
+
+.auth-footer > a:hover {
+    color: var(--green);
+}
+
+.auth-footer > a i {
+    color: var(--green);
+}
+
+/* ========================================
+   BOTTOM FOOTER
+======================================== */
+
+.auth-bottom {
+    width: 100%;
+    max-width: 455px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+    color: #737b75;
+    font-size: 10px;
+}
+
+.auth-bottom span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.auth-bottom i {
+    color: var(--green);
+    font-size: 13px;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 520px) {
+    .auth-page {
+        padding: 30px 15px 22px;
+    }
+
+    .auth-brand {
+        margin-bottom: 24px;
+    }
+
+    .auth-brand > a {
+        font-size: 24px;
+    }
+
+    .auth-card {
+        padding: 29px 22px;
+        border-radius: 18px;
+    }
+
+    .auth-header h1 {
+        font-size: 26px;
+    }
+
+    .auth-header p {
+        font-size: 12px;
+    }
+
+    .auth-bottom {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}

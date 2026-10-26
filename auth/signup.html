@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Customer Account | SHOPFORGE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND -->
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <!-- HEADER -->
+    <header class="auth-header">
+
+        <a href="../frontend/index.html" class="auth-logo">
+            <span>SHOP</span>FORGE
+        </a>
+
+        <a href="../frontend/index.html" class="back-home">
+            <i class="bi bi-arrow-left"></i>
+            Home
+        </a>
+
+    </header>
+
+
+    <!-- SIGNUP CONTAINER -->
+    <main class="auth-container">
+
+        <div class="auth-card">
+
+            <!-- TOP -->
+            <div class="auth-heading">
+
+                <div class="auth-icon">
+                    <i class="bi bi-person-plus"></i>
+                </div>
+
+                <span class="auth-label">
+                    CUSTOMER ACCOUNT
+                </span>
+
+                <h1>
+                    Create your account
+                </h1>
+
+                <p>
+                    Join SHOPFORGE and discover products from
+                    trusted vendors in one place.
+                </p>
+
+            </div>
+
+
+            <!-- FORM -->
+            <form id="customerSignupForm">
+
+                <!-- FULL NAME -->
+                <div class="form-group">
+
+                    <label for="customerName">
+                        Full Name
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="bi bi-person"></i>
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            name="customerName"
+                            placeholder="Enter your full name"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="form-group">
+
+                    <label for="customerEmail">
+                        Email Address
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="bi bi-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="customerEmail"
+                            name="customerEmail"
+                            placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHONE -->
+                <div class="form-group">
+
+                    <label for="customerPhone">
+                        Phone Number
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="bi bi-phone"></i>
+
+                        <input
+                            type="tel"
+                            id="customerPhone"
+                            name="customerPhone"
+                            placeholder="Enter your phone number"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+
+                    <label for="customerPassword">
+                        Password
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="bi bi-lock"></i>
+
+                        <input
+                            type="password"
+                            id="customerPassword"
+                            name="customerPassword"
+                            placeholder="Create a password"
+                            required>
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-target="customerPassword">
+
+                            <i class="bi bi-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+                <div class="form-group">
+
+                    <label for="customerConfirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="bi bi-shield-lock"></i>
+
+                        <input
+                            type="password"
+                            id="customerConfirmPassword"
+                            name="customerConfirmPassword"
+                            placeholder="Confirm your password"
+                            required>
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-target="customerConfirmPassword">
+
+                            <i class="bi bi-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TERMS -->
+                <div class="terms">
+
+                    <input
+                        type="checkbox"
+                        id="customerTerms"
+                        required>
+
+                    <label for="customerTerms">
+
+                        I agree to the
+                        <a href="#">Terms of Service</a>
+                        and
+                        <a href="#">Privacy Policy</a>.
+
+                    </label>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+                <div
+                    id="signupMessage"
+                    class="form-message">
+                </div>
+
+
+                <!-- BUTTON -->
+                <button
+                    type="submit"
+                    class="auth-submit">
+
+                    <span>Create Customer Account</span>
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+
+            <!-- LOGIN -->
+            <div class="auth-footer">
+
+                <p>
+                    Already have an account?
+                    <a href="login.html">
+                        Login
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- VENDOR LINK -->
+            <div class="account-switch">
+
+                <span>
+                    Want to sell on SHOPFORGE?
+                </span>
+
+                <a href="vendor-signup.html">
+                    Create Vendor Account
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="auth.js"></script>
+
+</body>
+
+</html>
